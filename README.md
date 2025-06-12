@@ -1,4 +1,6 @@
 # Directed
+***IMPORTANT:** Directed is in beta! Expect things to break or not work properly! If you have any feedback, let me know - file an issue or open a PR in the appropriate repo (see bottom of README).*
+
 Simple redirection service - enter the site shortcut and hit Enter. No ads, no phishing attacks. Just simple JS redirects.
 
 Most of this README is also available on the [site](https://gohjy.github.io/directed).
