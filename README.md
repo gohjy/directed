@@ -25,3 +25,6 @@ Directed gets you direct to what you're looking for with just the service name -
 ---
 ## Source
 Directed's source code and database is available in this repo. If you spot any errors in the redirect or frontend code, you can raise an issue or open a PR in this repo; if you want to suggest an edit or new page for Directed, take a look at the [data repo](https://github.com/gohjy/directed-data).
+
+## Deployment
+The `pages` folder is deployed manually when needed, and is also scheduled to be deployed every Friday at 2038 hours UTC.
