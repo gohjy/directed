@@ -1,5 +1,5 @@
 # Directed
-Simple redirection service - enter the site shortcut and hit Enter. No ads, no interstitial pages. Just simple JS redirects.
+Simple redirection service - enter the site shortcut and hit Enter. No ads, no phishing attacks. Just simple JS redirects.
 
 Most of this README is also available on the [site](https://gohjy.github.io/directed).
 
