@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Directed</title>
+        <meta name="viewport" content="initial-scale=1, width=device-width, height=device-height">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="./style.css" rel="stylesheet">
+        
+        <link href="./directed-logo.png" rel="icon" type="image/png">
+    </head>
+
+    <body>
+        <h1 class="big center">
+            Directed
+        </h1>
+        
+        <div class="resize-container main center">
+            <p class="small">
+                Note: Directed is in beta right now! Expect things to break or not work properly! If you have any feedback, let me know - scroll down to the bottom of the page to see how.
+            </p>
+        </div>
+
+        <div class="resize-container main center">
+            <p>
+                Directed is a simple redirection service that redirects you to the page you're looking for.
+            </p>
+            <div class="code">
+                <!-- &ZeroWidthSpace; allows breaking of the thing at specific breakpoints -->
+                https://&ZeroWidthSpace;gohjy.&ZeroWidthSpace;github.&ZeroWidthSpace;io&ZeroWidthSpace;/directed/&ZeroWidthSpace;?to&ZeroWidthSpace;=&ZeroWidthSpace;<strong>page&ZeroWidthSpace;name</strong>
+            </div>
+            <p>
+                You can view a list of all Directed links <a href="./list.html" target="_blank">here</a>.
+            </p>
+        </div>
+        
+        <div class="resize-container main center">
+            <h2>Use Directed</h2>
+            <p>
+                For easy access, you can drag this bookmarklet to your bookmarks bar:
+                <a href="javascript:(()=>{const p=prompt('Page:');if(p)location.assign(`https://gohjy.github.io/directed/?to=${encodeURIComponent(p)}`);})();">Directed shortcut</a>. 
+                (On mobile devices, bookmark this page then edit the bookmark and copy and paste the link address above into the URL field.)
+            </p>
+            <p>
+                On Chrome and Edge, you can also set a shortcut for Directed - go to your browser settings and follow the steps for adding a site search.
+            </p>
+        </div>
+        
+        <div class="resize-container main center">
+            <h2>Inspiration</h2>
+            <p>
+                Directed was born out of my personal frustration with Google's sponsored search results, which can sometimes number 3 or 4 per search and make it much harder to find the actual link I'm looking for.
+            </p>
+            <p>
+                I use many online services with too many URLs to remember - sometimes more than one per service - but searching for the service on Google often returns many sponsored ads, some of which are phishing sites as well.
+            </p>
+            <p>
+                Directed gets you direct to what you're looking for with just the service name - no fake sites, no sponsored ads.
+            </p>
+        </div>
+        <div class="resize-container main center">
+            <h2>Source</h2>
+            <p>
+                Directed's source code is available <a href="https://github.com/gohjy/directed" target="_blank">here</a> on GitHub; the data is over <a href="https://github.com/gohjy/directed-data" target="_blank">here</a>. If you spot any errors or want to add another service, do let me know - see the respective repos above for more details!
+            </p>
+        </div>
+        <div class="resize-container main center">
+            <h2>Troubleshooting</h2>
+            <p>
+                If Directed doesn't work for you, check your network connection and <a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/" target="_blank">make sure JavaScript is enabled</a>.
+            </p>
+            <p>
+                If you can't reach a shortcut that's in the <a href="./list.html" target="_blank">dataset</a>, try <a href="https://www.whatismybrowser.com/guides/clear-cache-history-cookies/" target="_blank">clearing your cache</a>.
+            </p>
+            <p>
+                If Directed is still not working, file an issue with us - see "Source" above.
+            </p>
+        </div>
+    </body>
+</html>

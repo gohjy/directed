@@ -1,0 +1,162 @@
+:root {
+    --main-color: #FFFFFF;
+}
+
+*, body {
+    font-family: "Space Mono", "Courier New", monospace, sans-serif;
+    box-sizing: border-box;
+    
+    scrollbar-gutter: stable both-edges;
+    scrollbar-width: auto;
+    scrollbar-color: #FFFFFF88 transparent;
+}
+
+body {
+    background: black;
+    color: white;
+
+    padding: 8px;
+}
+
+body, html {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    margin: 0;
+
+    overflow-x: hidden;
+}
+
+big {
+    font-size: 2em;
+}
+
+h1.big {
+    font-size: 3em;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resize-container {
+    width: min(100%, 600px);
+}
+
+.main {
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.code {
+    border-radius: 10px;
+    background: #FFFFFF3f;
+    text-align: left;
+    padding: 5px;
+    color: white;
+    word-wrap:break-word;
+}
+
+a[href] {
+    color: cyan;
+}
+
+table.table {
+    border: 1px solid var(--main-color);
+    border-collapse: collapse;
+    margin: 10px;
+    width: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+}
+
+tbody, thead {
+    width: 100%;
+    max-width: 100%;
+}
+
+table.url-list-table {
+    position: relative;
+}
+
+table.url-list-table :is(th, td) {
+    text-align: left;
+    padding: 5px;
+}
+
+table.url-list-table :is(th, td):first-child {
+    width: 30%;
+}
+
+table.url-list-table :is(th, td):nth-child(2) {
+    width: 70%;
+}
+
+table.url-list-table :is(thead, tbody, tr, th, td) {
+    border: 1px solid var(--main-color);
+    max-width: 100%;
+}
+
+
+.invisible {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    table {
+        
+    display: block;
+    }
+
+    table :is(thead, tbody, tr) {
+        overflow: clip;
+        display: block;
+        border: none !important;
+    }
+
+    table.url-list-table td {
+        display: block;
+        border: none;
+        white-space: nowrap;
+        overflow-x: auto;
+        width: 100% !important;
+    }
+
+    table.url-list-table thead {
+        display: none;
+    }
+
+    table.url-list-table td:first-child {
+        font-weight: bold;
+    }
+
+    table.url-list-table tr:not(:first-child) {
+        border-top: 1px solid var(--main-color) !important;
+    }
+}
+
+input#search-input {
+    width: calc(100% - 10px); 
+    margin: 0 auto; 
+    display: block; 
+    background-color: transparent; 
+    color: white; 
+    border: 1px solid var(--main-color); 
+    border-radius: 2px; 
+    padding: 5px;
+    position: sticky;
+    top: 10px;
+    backdrop-filter: blur(1rem);
+    z-index: 9999;
+}
+
+.main-content-area:has(input#search-input) {
+    position: relative;
+}
+
+.small {
+    font-size: 0.8em;
+}
