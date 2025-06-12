@@ -23,7 +23,13 @@ body, html {
     max-width: 100%;
     min-width: 100%;
     margin: 0;
+}
 
+body > * {
+    max-width: 100%;
+}
+
+body > :not(.main-content-area:has(input#search-input)) {
     overflow-x: hidden;
 }
 
@@ -71,6 +77,8 @@ table.table {
     margin: 10px;
     width: calc(100% - 20px);
     max-width: calc(100% - 20px);
+
+    overflow-x: hidden;
 }
 
 tbody, thead {
