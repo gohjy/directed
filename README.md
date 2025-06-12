@@ -3,7 +3,7 @@
 
 Simple redirection service - enter the site shortcut and hit Enter. No ads, no phishing attacks. Just simple JS redirects.
 
-Most of this README is also available on the [site](https://gohjy.github.io/directed).
+Most of this README is also available on the [site][site-link].
 
 ## About Directed
 Directed is a simple redirection service that redirects you to the page you're looking for.
@@ -13,7 +13,7 @@ https://gohjy.github.io/directed/?to=pagename
 You can view a list of all Directed links in the database.
 
 ## Use Directed
-For easy access, you can drag the bookmarklet on the [home page](https://gohjy.github.io/directed) to your bookmarks bar. (On mobile devices, bookmark the Directed homepage then edit the bookmark and copy and paste the link address on the homepage into the URL field.)
+For easy access, you can drag the bookmarklet on the [home page][site-link] to your bookmarks bar. (On mobile devices, bookmark the Directed homepage then edit the bookmark and copy and paste the link address on the homepage into the URL field.)
 
 On Chrome and Edge, you can also set a shortcut for Directed - go to your browser settings and follow the steps for adding a site search.
 
@@ -30,3 +30,6 @@ Directed's source code and database is available in this repo. If you spot any e
 
 ## Deployment
 The `pages` folder is deployed manually when needed, and is also scheduled to be deployed every Friday at 2038 hours UTC.
+
+
+[site-link]: https://gohjy.github.io/directed/home
