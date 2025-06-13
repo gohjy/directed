@@ -159,6 +159,7 @@ input#search-input {
     top: 10px;
     backdrop-filter: blur(1rem);
     z-index: 9999;
+    font-size: inherit;
 }
 
 .main-content-area:has(input#search-input) {
@@ -167,4 +168,17 @@ input#search-input {
 
 .small {
     font-size: 0.8em;
+}
+
+.banner-goto-not-found {
+    width: 100%;
+    background-color: #FF000055;
+    font-weight: bold;
+    padding: 10px;
+    
+    display: none;
+}
+
+.banner-goto-not-found:target {
+    display: block;
 }

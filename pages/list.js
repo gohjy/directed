@@ -2,6 +2,11 @@
 
 const dataUrl = "https://gohjy.github.io/directed-data/data.json";
 
+if (location.hash === "#gtn") {
+    document.querySelector("#gtn").style.display = "block";
+    location.hash = "";
+}
+
 fetch(dataUrl)
 .then(res => res.json())
 .then(jsonRes => {
@@ -13,6 +18,7 @@ fetch(dataUrl)
         return td;
     }
     const table = document.querySelector("#content-holder");
+    table.innerHTML = "";
     for (let [shortcut, url] of Object.entries(jsonRes)) {
         const row = document.createElement("tr");
         row.dataset.shortcut = shortcut;
