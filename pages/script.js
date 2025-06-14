@@ -15,7 +15,12 @@ const fetchData = async (dataUrl, goto) => {
 
     return await fetch(dataUrl, { cache: "reload" })
     .then(res => res.json())
-    .then(jsonRes => {
+    .then(json => {
+        const jsonRes = json.links;
+        if (!jsonRes) {
+            alert(JSON.stringify(json))
+            return false;
+        }
         if (goto && goto.startsWith?.("_")) {
             return 0; // treat _url comments as not found
         } else if (goto && jsonRes[goto.toLowerCase()]) {

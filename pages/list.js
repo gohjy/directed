@@ -9,7 +9,11 @@ if (location.hash === "#gtn") {
 
 fetch(dataUrl)
 .then(res => res.json())
-.then(jsonRes => {
+.then(json => {
+    const jsonRes = json.links;
+    if (!jsonRes) {
+        throw new Error("json response not in proper format");
+    }
     const jsonData = Object.entries(jsonRes).sort(([a], [b]) => a > b ? 1 : a < b ? -1 : 0); // sort alphabetically
     const newTd = (x) => {
         const td = document.createElement("td");
