@@ -10,6 +10,7 @@ if (location.hash === "#gtn") {
 fetch(dataUrl)
 .then(res => res.json())
 .then(jsonRes => {
+    const jsonData = Object.entries(jsonRes).sort(([a], [b]) => a > b ? 1 : a < b ? -1 : 0); // sort alphabetically
     const newTd = (x) => {
         const td = document.createElement("td");
         if (x !== null && x !== undefined) {
@@ -19,7 +20,9 @@ fetch(dataUrl)
     }
     const table = document.querySelector("#content-holder");
     table.innerHTML = "";
-    for (let [shortcut, url] of Object.entries(jsonRes)) {
+    let dctLinkCount = 0;
+    for (let [shortcut, url] of jsonData) {
+        if (shortcut.match(/[^a-zA-Z0-9_\-$]/)) continue;
         const row = document.createElement("tr");
         row.dataset.shortcut = shortcut;
         const shortcutCell = newTd();
@@ -30,7 +33,14 @@ fetch(dataUrl)
         shortcutCell.append(shortcutLink);
         const urlCell = newTd(url);
         row.append(shortcutCell, urlCell);
-        table.append(row);
+        console.log(shortcut)
+        if (shortcut.startsWith("dct-") || shortcut === "dct") {
+            if (table.children[dctLinkCount-1]) table.children[dctLinkCount-1].after(row);
+            else table.prepend(row);
+            dctLinkCount++;
+        } else {
+            table.append(row);
+        }
     }
     document.querySelector("#search-input").removeAttribute("disabled");
 })
