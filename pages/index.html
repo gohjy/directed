@@ -2,7 +2,12 @@
 <html>
     <head>
         <title>Redirecting...</title>
+        <meta name="referrer" content="same-origin">
+        <meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, minimum-scale=1">
         <script src="./main-redir.js" type="module"></script>
+        <script>
+            setTimeout(()=>{document.body.insertAdjacentHTML("beforeend","<p>(If this is taking a long time, check your network connection. You may also want to have a look at <a href=\"./home.html#troubleshooting\">this page</a>.)</p>")}, 5500)
+        </script>
     </head>
     <body>
         Please wait...
