@@ -9,6 +9,9 @@ instead of the default
 
 - `pack` should be a URL (properly escaped) to a JSON file in the same structure as the one at the [directed-data repo](https://github.com/gohjy/directed-data). 
 - `to` remains the same shortcut name
+- Optionally, specify the `nobasic` param to exclude the basic dataset: `.../?pack=yoururl&to=pagename&nobasic`
+
+The order of the parameters does not matter.
 
 When this extension URL is used, Directed will attempt the following:
 - First, Directed will use the **base URL** (https://gohjy.github.io/directed-data/data.json) to try and find a result from there.
