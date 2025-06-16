@@ -45,7 +45,7 @@ if (new URL(location.href).searchParams.has("nobasic")) {
             // ?to= was not present
             location.replace(homeUrl);
         } else if (basicRes === 0) {
-            if (addonUrl && isValidExt(goto)) defaultFetch(addonUrl, {nfUrl: searchEngine % goto});
+            if (addonUrl && isValidExt(goto)) defaultFetch(addonUrl, {nfUrl: searchEngine.replace("%s", goto)});
             else if (searchEngine) location.replace(searchEngine.replace("%s", goto));
             else location.replace(notFoundUrl);
         } else {
