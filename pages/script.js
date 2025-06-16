@@ -41,20 +41,20 @@ const fetchData = async (dataUrl, goto) => {
     });
 }
 
-const defaultFetch = async (url) => {
+const defaultFetch = async (url, {eUrl, hUrl, nfUrl}={undefined,undefined,undefined}) => {
     const result = await fetchData(url, new URL(location.href).searchParams.get("to"));
     if (result) {
         location.replace(result);
         return true;
     } else {
         if (result === false) {
-            location.replace(errorUrl);
+            location.replace(eUrl || errorUrl);
         } else if (result === null) {
-            location.replace(homeUrl);
+            location.replace(hUrl || homeUrl);
         } else if (result === 0) {
-            location.replace(notFoundUrl);
+            location.replace(nfUrl || notFoundUrl);
         } else {
-            location.replace(errorUrl);
+            location.replace(eUrl || errorUrl);
         }
         return false;
     }
